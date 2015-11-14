@@ -62,6 +62,7 @@
  * flags =>
  * A key/value array of driver specific connection options.
  */
+//para iniciar actualizar  clave acceso
 class DATABASE_CONFIG {
 
 	public $default = array(
