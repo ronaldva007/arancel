@@ -1,6 +1,7 @@
 <div class="solicitudArancels index">
 	<h2><?php echo __('Mis Solicitudes de Arancels'); ?></h2>
 	<table  class="table table-bordered table-hover" width="100%">
+	<?php echo $this->Html->link(__('Nueva Solicitud'), array('controller' => 'solicitudArancels','action' => 'add')); ?>
 	<thead>
 	<tr>
 			<!--<th><?php echo $this->Paginator->sort('id'); ?></th>-->
@@ -23,7 +24,7 @@
 		<td>Abierta</td>
 		<td class="actions">
 		<i class="fa fa-desktop	"></i><?php echo $this->Html->link(__('Cerrar'), array('action' => 'view', $solicitudArancel['SolicitudArancel']['id'])); ?>
-		<?php echo $this->Html->link(__('Pagar'), array('action' => 'view', $solicitudArancel['SolicitudArancel']['id'])); ?>
+		<?php echo $this->Html->link(__('Pagar'), array('controller' => 'pagos','action' => 'add', $solicitudArancel['SolicitudArancel']['id'])); ?>
 
 
 
@@ -50,7 +51,7 @@
 	</div>
 	<hr>
 </div>
-<div class="actions">
+<!--<div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Solicitud Arancel'), array('action' => 'add')); ?></li>
@@ -63,4 +64,5 @@
 		<li><?php echo $this->Html->link(__('List Solicitud Arancel Estatuses'), array('controller' => 'solicitud_arancel_estatuses', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Solicitud Arancel Estatus'), array('controller' => 'solicitud_arancel_estatuses', 'action' => 'add')); ?> </li>
 	</ul>
-</div>
+</div>-->
+
